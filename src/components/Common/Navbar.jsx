@@ -32,7 +32,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
             <div className="w-10 h-10 bg-green-700 rounded-xl flex items-center justify-center text-white font-bold">
@@ -56,44 +56,10 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Toggle */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-gray-800"
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-white border-t">
-          <div className="flex flex-col px-6 py-6 space-y-4 text-gray-700 font-medium">
-            <a onClick={closeMenu} href="#services">
-              Services
-            </a>
-            <a onClick={closeMenu} href="#about">
-              About
-            </a>
-            <a onClick={closeMenu} href="#reviews">
-              Reviews
-            </a>
-            <a onClick={closeMenu} href="#contact">
-              Contact
-            </a>
-
-            <a
-              href="tel:0450410800"
-              className="flex items-center justify-center gap-2 bg-green-700 text-white py-3 rounded-full mt-4 font-semibold"
-            >
-              <Phone size={16} />
-              Call Now
-            </a>
-          </div>
-        </div>
-      )}
+  
     </header>
   );
 }
